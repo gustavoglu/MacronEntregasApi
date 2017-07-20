@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{6E80DE26-D185-4B96-80AF-0190D314F8E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Services", "{B49224B8-306D-4DDE-B296-17A8356DF572}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Application", "3 - Application", "{E9662615-0260-4AA5-A6C0-ECDCE3729F66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", "{82AB4B5D-BE9D-431D-9D55-D659FC9D95D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{7AD83989-9705-4A98-974F-70F962846B69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSProject.Domain", "CQRSProject.Domain\CQRSProject.Domain.csproj", "{A1D57725-31A7-460D-AFC6-73063FB84552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRSProject.Domain.Core", "CQRSProject.Domain.Core\CQRSProject.Domain.Core.csproj", "{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1D57725-31A7-460D-AFC6-73063FB84552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D57725-31A7-460D-AFC6-73063FB84552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D57725-31A7-460D-AFC6-73063FB84552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D57725-31A7-460D-AFC6-73063FB84552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1D57725-31A7-460D-AFC6-73063FB84552} = {82AB4B5D-BE9D-431D-9D55-D659FC9D95D2}
+		{391D1DA5-D9FF-4370-8F54-EC8D96C2BE48} = {82AB4B5D-BE9D-431D-9D55-D659FC9D95D2}
+	EndGlobalSection
+EndGlobal

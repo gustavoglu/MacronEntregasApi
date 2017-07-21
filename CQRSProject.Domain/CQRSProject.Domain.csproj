@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="fluentvalidation" Version="7.1.0" />
+    <PackageReference Include="system.security.claims" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

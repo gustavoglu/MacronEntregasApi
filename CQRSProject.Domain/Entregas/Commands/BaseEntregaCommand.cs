@@ -5,7 +5,7 @@ namespace CQRSProject.Domain.Entregas.Commands
 {
     public abstract class BaseEntregaCommand : Command
     {
-        public Guid? Id { get; set; }
+        public Guid Id { get; set; }
 
         public string NomeColaborador { get; protected set; } = null;
 

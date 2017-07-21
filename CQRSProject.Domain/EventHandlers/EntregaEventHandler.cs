@@ -1,11 +1,24 @@
 ﻿using CQRSProject.Domain.Core.Events;
+using CQRSProject.Domain.Entregas.Events;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQRSProject.Domain.EventHandlers
 {
-    public class EntregaEventHandler //: IHandler<CriarEntrega>
+    public class EntregaEventHandler : IHandler<CriarEntregaEvent>, IHandler<AtualizarEntregaEvent>, IHandler<DeletarEntregaEvent>
     {
+        public void Handle(DeletarEntregaEvent message)
+        {
+            //
+        }
+
+        public void Handle(AtualizarEntregaEvent message)
+        {
+            //
+        }
+
+        public void Handle(CriarEntregaEvent message)
+        {
+            //
+        }
     }
 }

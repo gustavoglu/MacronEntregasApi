@@ -4,6 +4,12 @@ namespace CQRSProject.Domain.Core.Models
 {
     public abstract class BaseEntity<T>
     {
+
+        protected BaseEntity()
+        {
+            this.Id = Guid.NewGuid();
+        }
+
         public Guid? Id { get; set; }
 
         public string CriadoPor { get; set; } = null;

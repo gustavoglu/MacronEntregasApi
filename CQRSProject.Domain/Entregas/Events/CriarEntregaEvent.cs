@@ -1,8 +1,9 @@
-﻿using System;
+﻿using CQRSProject.Domain.Core.Events;
+using System;
 
 namespace CQRSProject.Domain.Entregas.Events
 {
-    public class CriarEntregaEvent
+    public class CriarEntregaEvent : Event
     {
         public Guid? Id { get; protected set; }
 

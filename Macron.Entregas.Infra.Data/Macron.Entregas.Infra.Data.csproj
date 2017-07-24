@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.entityframeworkcore" Version="1.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.design" Version="1.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="1.1.2" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="1.1.1" />
+    <PackageReference Include="microsoft.extensions.configuration" Version="1.1.2" />
+    <PackageReference Include="microsoft.extensions.configuration.fileextensions" Version="1.1.2" />
+    <PackageReference Include="microsoft.extensions.configuration.json" Version="1.1.2" />
+    <PackageReference Include="system.reflection.typeextensions" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

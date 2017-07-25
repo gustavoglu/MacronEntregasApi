@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj" />
+    <ProjectReference Include="..\Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj" />
   </ItemGroup>
+
 
 </Project>

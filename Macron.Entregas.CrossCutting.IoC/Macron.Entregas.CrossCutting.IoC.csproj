@@ -5,9 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj" />
     <ProjectReference Include="..\Macron.Entregas.Application\Macron.Entregas.Application.csproj" />
     <ProjectReference Include="..\Macron.Entregas.CrossCutting.Bus\Macron.Entregas.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj" />
+    <ProjectReference Include="..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj" />
     <ProjectReference Include="..\Macron.Entregas.Infra.Data\Macron.Entregas.Infra.Data.csproj" />
   </ItemGroup>
 

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj" />
+    <ProjectReference Include="..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

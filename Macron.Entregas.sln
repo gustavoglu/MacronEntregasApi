@@ -13,10 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 -  Infra", "5 -  Infra", "{9735E9E2-610A-4784-96E8-3C9399EDC9D4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Domain", "..\Macron.Entregas.Domain\Macron.Entregas.Domain.csproj", "{A99E4934-3F68-4388-BC03-CB211E647F3B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Domain.Core", "..\Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj", "{D6BF34D8-A651-49C6-B0A1-8A01F798C697}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Infra.Data", "Macron.Entregas.Infra.Data\Macron.Entregas.Infra.Data.csproj", "{6CA8A52A-A832-4446-8588-7E50F7D805D3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Site", "Macron.Entregas.Site\Macron.Entregas.Site.csproj", "{94F9A9A8-4CAA-40B8-9DE1-D787DAC7D5D0}"
@@ -27,7 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.CrossCuttin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.CrossCutting.IoC", "Macron.Entregas.CrossCutting.IoC\Macron.Entregas.CrossCutting.IoC.csproj", "{892FAF6C-59F3-4AF5-AEAF-0E1C7C9508ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Macron.Entregas.API", "Macron.Entregas.API\Macron.Entregas.API.csproj", "{81045676-1FF8-4CBC-9991-B3EF956B0899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.API", "Macron.Entregas.API\Macron.Entregas.API.csproj", "{81045676-1FF8-4CBC-9991-B3EF956B0899}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Domain", "Macron.Entregas.Domain\Macron.Entregas.Domain.csproj", "{6EA5B549-F507-424A-BD40-E6F604A95456}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Macron.Entregas.Domain.Core", "Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj", "{81CF8766-FC6D-4EC2-868D-A0842C33A032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A99E4934-3F68-4388-BC03-CB211E647F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A99E4934-3F68-4388-BC03-CB211E647F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A99E4934-3F68-4388-BC03-CB211E647F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A99E4934-3F68-4388-BC03-CB211E647F3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6BF34D8-A651-49C6-B0A1-8A01F798C697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6BF34D8-A651-49C6-B0A1-8A01F798C697}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6BF34D8-A651-49C6-B0A1-8A01F798C697}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6BF34D8-A651-49C6-B0A1-8A01F798C697}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CA8A52A-A832-4446-8588-7E50F7D805D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CA8A52A-A832-4446-8588-7E50F7D805D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CA8A52A-A832-4446-8588-7E50F7D805D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,18 +59,26 @@ Global
 		{81045676-1FF8-4CBC-9991-B3EF956B0899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81045676-1FF8-4CBC-9991-B3EF956B0899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81045676-1FF8-4CBC-9991-B3EF956B0899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA5B549-F507-424A-BD40-E6F604A95456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA5B549-F507-424A-BD40-E6F604A95456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA5B549-F507-424A-BD40-E6F604A95456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA5B549-F507-424A-BD40-E6F604A95456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CF8766-FC6D-4EC2-868D-A0842C33A032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CF8766-FC6D-4EC2-868D-A0842C33A032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CF8766-FC6D-4EC2-868D-A0842C33A032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CF8766-FC6D-4EC2-868D-A0842C33A032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A99E4934-3F68-4388-BC03-CB211E647F3B} = {543B2F20-4ECA-468E-B285-FA25A8ACC76D}
-		{D6BF34D8-A651-49C6-B0A1-8A01F798C697} = {543B2F20-4ECA-468E-B285-FA25A8ACC76D}
 		{6CA8A52A-A832-4446-8588-7E50F7D805D3} = {9735E9E2-610A-4784-96E8-3C9399EDC9D4}
 		{94F9A9A8-4CAA-40B8-9DE1-D787DAC7D5D0} = {40C222EC-1074-4A7A-99F5-09F7961FC5D4}
 		{1C94975B-3F34-4C3F-875A-F4EA13A30322} = {5CEF0066-92C1-4FE9-B89F-093D9B56D637}
 		{021A8C00-9E3E-4C66-929E-4A31AB134A14} = {9735E9E2-610A-4784-96E8-3C9399EDC9D4}
 		{892FAF6C-59F3-4AF5-AEAF-0E1C7C9508ED} = {9735E9E2-610A-4784-96E8-3C9399EDC9D4}
 		{81045676-1FF8-4CBC-9991-B3EF956B0899} = {3F66DFF1-E5D7-4E13-B2BB-AAB54BFB7E13}
+		{6EA5B549-F507-424A-BD40-E6F604A95456} = {543B2F20-4ECA-468E-B285-FA25A8ACC76D}
+		{81CF8766-FC6D-4EC2-868D-A0842C33A032} = {543B2F20-4ECA-468E-B285-FA25A8ACC76D}
 	EndGlobalSection
 EndGlobal

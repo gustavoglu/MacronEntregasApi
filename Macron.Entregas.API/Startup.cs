@@ -28,8 +28,14 @@ namespace Macron.Entregas.API
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc(opt =>
+            {
+
+
+            });
             services.AddAutoMapper();
+
+            services.AddCors();
 
             NativeSimpleInjector.RegisterServices(services);
         }
@@ -40,9 +46,11 @@ namespace Macron.Entregas.API
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+
             app.UseMvc();
 
-            InMemoryBus.ContainerAccessor = () => accessor.HttpContext.RequestServices; 
+            InMemoryBus.ContainerAccessor = () => accessor.HttpContext.RequestServices;
 
         }
     }

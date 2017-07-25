@@ -7,11 +7,13 @@ using Macron.Entregas.Domain.Core.Bus;
 using Macron.Entregas.Domain.Core.Events;
 using Macron.Entregas.Domain.Core.Notifications;
 using Macron.Entregas.Domain.Events;
+using Macron.Entregas.Domain.Interfaces;
 using Macron.Entregas.Domain.Interfaces.EntityRepository;
 using Macron.Entregas.Domain.Models.Entregas.Commands;
 using Macron.Entregas.Domain.Models.Entregas.Events;
 using Macron.Entregas.Infra.Data.Context;
 using Macron.Entregas.Infra.Data.Repository.RepositoryEntitys;
+using Macron.Entregas.Infra.Data.UoW;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Macron.Entregas.CrossCutting.IoC
@@ -41,7 +43,7 @@ namespace Macron.Entregas.CrossCutting.IoC
 
             // Infra - Data
             services.AddScoped<IEntregaRepository, EntregaRepository>();
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<EntregasContext>();
 
             // Infra - Bus

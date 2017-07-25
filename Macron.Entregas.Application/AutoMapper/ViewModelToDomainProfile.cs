@@ -11,13 +11,13 @@ namespace Macron.Entregas.Application.AutoMapper
             #region Entregas
 
             CreateMap<EntregaViewModel, CriarEntregaCommand>()
-                .ConstructUsing(e => new CriarEntregaCommand(e.NomeColaborador, e.RGColaborador, e.ChaveDeAcessoNota, e.DataEnvio, e.Local, e.Latitude, e.Longitude));
+                .ConstructUsing(e => new CriarEntregaCommand(e.NomeColaborador, e.RGColaborador, e.ChaveDeAcessoNota, e.DataEnvio.Value, e.Local, e.Latitude, e.Longitude));
             CreateMap<EntregaViewModel, AtualizarEntregaCommand>()
-                .ConstructUsing(e => new AtualizarEntregaCommand(e.Id, e.NomeColaborador, e.RGColaborador, e.ChaveDeAcessoNota, e.DataEnvio, e.Local, e.Latitude, e.Longitude, e.SincronizadoEm, e.Sincronizado));
+                .ConstructUsing(e => new AtualizarEntregaCommand(e.Id, e.NomeColaborador, e.RGColaborador, e.ChaveDeAcessoNota, e.DataEnvio.Value, e.Local, e.Latitude, e.Longitude, e.SincronizadoEm, e.Sincronizado));
             CreateMap<EntregaViewModel, DeletarEntregaCommand>()
-               .ConstructUsing(e => new DeletarEntregaCommand(e.Id));
+               .ConstructUsing(e => new DeletarEntregaCommand(e.Id.Value));
             CreateMap<EntregaViewModel, ReativarEntregaCommand>()
-               .ConstructUsing(e => new ReativarEntregaCommand(e.Id));
+               .ConstructUsing(e => new ReativarEntregaCommand(e.Id.Value));
 
             #endregion
         }

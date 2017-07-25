@@ -30,7 +30,7 @@ namespace Macron.Entregas.Infra.Data.Repository
         public virtual T Criar(T entity)
         {
             DbSet.Add(entity);
-            return DbSet.Find(entity);
+            return entity;//DbSet.Find(entity);
 
         }
 

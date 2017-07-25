@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Macron.Entregas.Domain.Core\Macron.Entregas.Domain.Core.csproj" />
+    <PackageReference Include="fluentvalidation" Version="7.1.0" />
   </ItemGroup>
 
 </Project>

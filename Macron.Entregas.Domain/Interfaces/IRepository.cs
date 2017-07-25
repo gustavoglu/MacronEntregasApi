@@ -7,9 +7,9 @@ namespace Macron.Entregas.Domain.Interfaces
 {
     public interface IRepository<T> : IDisposable where T : BaseEntity
     {
-        T Criar(T entity);
+        void Criar(T entity);
 
-        T Atualizar(T entity);
+        void Atualizar(T entity);
 
         T TrazerPorId(Guid id);
 
@@ -17,9 +17,9 @@ namespace Macron.Entregas.Domain.Interfaces
 
         T TrazerDeletadoPorId(Guid id);
 
-        T Deletar(Guid id);
+        void Deletar(Guid id);
 
-        T Reativar(Guid id);
+        void Reativar(Guid id);
 
         IEnumerable<T> Pesquisar(Expression<Func<T,bool>> predicate);
 

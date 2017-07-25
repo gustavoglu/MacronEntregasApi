@@ -39,13 +39,13 @@ namespace Macron.Entregas.Infra.Data.Context
             var atualizados = ChangeTracker.Entries().Where(e => e.Entity is BaseEntity && e.State == EntityState.Modified);
             var deletados = ChangeTracker.Entries().Where(e => e.Entity is BaseEntity && e.State == EntityState.Deleted);
 
-            if (!adicionados.Any())
+            if (adicionados.Any())
                 AdicionaEntidades(adicionados);
 
-            if (!atualizados.Any())
+            if (atualizados.Any())
                 AtualizaEntidades(atualizados);
 
-            if (!deletados.Any())
+            if (deletados.Any())
                 DeletaEntidades(deletados);
 
             return base.SaveChanges();

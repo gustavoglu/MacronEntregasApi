@@ -18,7 +18,7 @@ namespace Macron.Entregas.Domain.Core.Models
 
         public string DeletadoPor { get; set; } = null;
 
-        public bool? Deletado { get; set; }
+        public bool? Deletado { get; set; } = false;
 
         protected BaseEntity()
         {

@@ -12,44 +12,38 @@ namespace Macron.Entregas.Infra.Data.Repository
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
 
-        protected readonly EntregasContext Db;
+        protected readonly EntregasContext _db;
         protected readonly DbSet<T> DbSet;
 
-        public Repository()
+        public Repository(EntregasContext Db)
         {
-            Db = new EntregasContext();
-            DbSet = Db.Set<T>();
+            _db = Db;
+            DbSet = _db.Set<T>();
         }
 
-        public virtual T Atualizar(T entity)
+        public virtual void Atualizar(T entity)
         {
             DbSet.Update(entity);
-            return DbSet.Find(entity);
         }
 
-        public virtual T Criar(T entity)
+        public virtual void Criar(T entity)
         {
             DbSet.Add(entity);
-            return entity;//DbSet.Find(entity);
-
         }
 
-        public virtual T Deletar(Guid id)
+        public virtual void Deletar(Guid id)
         {
             var entity = TrazerPorId(id);
 
             DbSet.Remove(entity);
-
-            return DbSet.Find(id);
         }
 
-        public virtual T Reativar(Guid id)
+        public virtual void Reativar(Guid id)
         {
             var entity = TrazerPorId(id);
-            entity.Deletado = false;
-            var entityAtualizada = Atualizar(entity);
 
-            return entityAtualizada;
+            entity.Deletado = false;
+
         }
 
         public virtual T TrazerAtivoPorId(Guid id)
@@ -89,7 +83,7 @@ namespace Macron.Entregas.Infra.Data.Repository
 
         public virtual void Dispose()
         {
-            Db.Dispose();
+            _db.Dispose();
             GC.SuppressFinalize(this);
         }
 

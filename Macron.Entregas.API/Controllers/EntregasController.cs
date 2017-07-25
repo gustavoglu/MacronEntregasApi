@@ -7,6 +7,7 @@ using Macron.Entregas.Domain.Core.Bus;
 using AutoMapper;
 using Macron.Entregas.Domain.Interfaces.EntityRepository;
 using Macron.Entregas.Domain.Models.Entregas.Commands;
+using Macron.Entregas.Application.Interfaces;
 
 namespace Macron.Entregas.API.Controllers
 {
@@ -14,14 +15,15 @@ namespace Macron.Entregas.API.Controllers
     [Route("api/Entregas")]
     public class EntregasController : BaseController
     {
-
         private readonly IEntregaRepository _entregaRepository;
+        private readonly IEntregaAppService _entregaAppService;
         private readonly IBus _bus;
         private readonly IMapper _mapper;
 
-        public EntregasController(IEntregaRepository entregaRepository, IMapper mapper, IBus bus, IDomainNotificationHandler<DomainNotification> domainNotificatoinHandler) : base(bus, domainNotificatoinHandler)
+        public EntregasController(IEntregaAppService entregaAppService, IEntregaRepository entregaRepository, IMapper mapper, IBus bus, IDomainNotificationHandler<DomainNotification> domainNotificatoinHandler) : base(bus, domainNotificatoinHandler)
         {
             _entregaRepository = entregaRepository;
+            _entregaAppService = entregaAppService;
             _mapper = mapper;
             _bus = bus;
         }
@@ -29,7 +31,7 @@ namespace Macron.Entregas.API.Controllers
         [HttpGet]
         public IEnumerable<EntregaViewModel> Get()
         {
-            return _mapper.Map <IEnumerable<EntregaViewModel>>(_entregaRepository.TrazerTodosAtivos());
+            return _mapper.Map<IEnumerable<EntregaViewModel>>(_entregaRepository.TrazerTodosAtivos());
         }
 
         [HttpGet("{id:Guid}", Name = "Get")]
